@@ -1,0 +1,27 @@
+*********************************************************************************************************************
+*			INSTRUÇÕES PARA UTILIZAR OS BATS		       					    *
+*********************************************************************************************************************
+
+OBS: Presume-se que nesse ponto você já possui uma pasta com arquivos .bat
+
+
+1 - Pressione Win + Pause Break para acessar "Sistema" ou acesse pelo painel de controle
+2 - Clique em "Opções avançadas do sistema"
+3 - Na popup "Propriedades do Sistema" selecione a aba "Avançado"
+4 - Clique em "Variáveis de Ambiente"
+5 - Na popup "Variáveis de Ambiente" na GroupBox "Variáveis do Sistema" localize a variável "Path" e a selecione
+6 - Clique em Editar
+7 - Na popup "Editar Variável de Sistema" clique na textbox "Valor da Variável"
+8 - Pressione a tecla "End"
+9 - Digite um ";" e logo em seguida insira o caminho para a pasta com arquivos .bat
+OBS: Para adquirir o caminho apenas abra a pasta e clique barra de endereço do Windows Explorer e copie o endereço
+
+
+10 - para utilizar o .bat agora, pressione Win + R e digite o nome do bat sem a extensão ".bat"
+
+
+
+
+*********************************************************************************************************************
+* AUTOR: RAFAEL HIKARU NAKASATO 	DATA:02/08/2015							    	    *	
+*********************************************************************************************************************

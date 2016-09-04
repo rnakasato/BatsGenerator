@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="bpMain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rafank.controller.impl.MainMenuControl">
+   <left>
+      <VBox id="vbLeftMenu" alignment="TOP_CENTER" prefHeight="600.0" prefWidth="259.0" style="-fx-background-color: #c7c7c7; -fx-border-color: #000000;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox id="hbBGen" prefHeight="41.0" prefWidth="259.0">
+               <children>
+                  <Label text="BatsGenerator">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <Glow level="1.0" />
+               </effect>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <Label id="lblBats" text="Bats">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Label>
+            <Button id="btnNewBat" fx:id="btnNewBat" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="52.0" prefWidth="135.0" text="New Bat" textAlignment="CENTER">
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Label id="lblFolder" text="Folder">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+            </Label>
+            <Button id="btnNewFolder" fx:id="btnNewFolder" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="52.0" prefWidth="135.0" text="New Folder" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="btnListFolders" fx:id="btnListFolders" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="52.0" prefWidth="135.0" text="List Folders" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button id="btnListFolders" fx:id="btnExit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="52.0" prefWidth="135.0" text="Exit" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="60.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox id="vbCenter" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefWidth="747.0" style="-fx-background-color: #c7c7c7; -fx-border-color: #000000;">
+               <children>
+                  <Label text="Folder Path:">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="10.0" top="20.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label id="lblSelectedPath" fx:id="lblPath" prefHeight="21.0" prefWidth="425.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="5.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Button id="btnSelectFolder" fx:id="btnSelectFolder" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="95.0" text="Select Folder" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="btnOpen" fx:id="btnOpen" mnemonicParsing="false" prefHeight="33.0" prefWidth="79.0" text="Open">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="10.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox prefHeight="183.0" prefWidth="741.0" style="-fx-background-color: #c7c7c7; -fx-border-color: #000000;">
+               <children>
+                  <HBox id="hbFilter" alignment="CENTER_LEFT" prefWidth="741.0">
+                     <children>
+                        <Button id="btnFilter" fx:id="btnFilter" mnemonicParsing="false" prefHeight="33.0" prefWidth="79.0" text="Filter" textAlignment="CENTER">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <TextField id="txtFilter" fx:id="txtSearch" prefHeight="25.0" prefWidth="609.0" promptText="search ...">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Label text="Type:">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <HBox prefWidth="741.0">
+                     <children>
+                        <RadioButton id="rdTypeAll" fx:id="rdTypeAll" mnemonicParsing="false" selected="true" text="All">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Type" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton id="rdTypeOpenFolder" fx:id="rdTypeOpenFolder" mnemonicParsing="false" text="Open Folder" toggleGroup="$Type">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton id="rdTypeExecProgram" fx:id="rdTypeExecProgram" mnemonicParsing="false" text="Execute Program" toggleGroup="$Type">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton id="rdTypeOpenFIle" fx:id="rdTypeOpenFile" mnemonicParsing="false" text="Open File" toggleGroup="$Type">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton id="rdTypeCustomScript" fx:id="rdTypeCustomScript" mnemonicParsing="false" text="Custom Script" toggleGroup="$Type">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton id="rdTypeCustomScript" fx:id="rdTypeUnknown" mnemonicParsing="false" text="Unknown" toggleGroup="$Type">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+                  <Label text="Priority order:">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefWidth="741.0">
+                     <children>
+                        <RadioButton id="rdPoName" fx:id="rdPoName" mnemonicParsing="false" selected="true" text="Name">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="PriorityOrder" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton id="rdPoPath" fx:id="rdPoPath" mnemonicParsing="false" text="Path" toggleGroup="$PriorityOrder">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                        <RadioButton id="rdPoType" fx:id="rdPoType" mnemonicParsing="false" text="Type" toggleGroup="$PriorityOrder">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </RadioButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox prefHeight="60.0" prefWidth="741.0">
+               <children>
+                  <Button id="btnOpen" fx:id="btnEdit" mnemonicParsing="false" prefHeight="33.0" prefWidth="79.0" text="Edit">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="btnOpen" fx:id="btnDelete" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="79.0" text="Delete">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="btnOpen" fx:id="btnSystemEditor" mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="System Editor">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="btnOpen" fx:id="btnDetail" mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="Detail">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="45.0" prefWidth="327.0">
+                     <children>
+                        <Button id="btnOpen" fx:id="btnRefresh" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="Refresh">
+                           <HBox.margin>
+                              <Insets bottom="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button id="btnOpen" fx:id="btnExecuteBat" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="33.0" prefWidth="108.0" text="Execute Bat">
+                           <HBox.margin>
+                              <Insets bottom="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <TableView id="tvBats" fx:id="tvBats">
+              <columns>
+                <TableColumn fx:id="cnName" prefWidth="105.0" text="Name" />
+                <TableColumn id="cnPath" fx:id="cnPath" prefWidth="273.0" text="Path" />
+                  <TableColumn id="cnType" fx:id="cnTargetPath" prefWidth="249.0" text="Target Path" />
+                  <TableColumn id="cnType" fx:id="cnType" maxWidth="200.0" prefWidth="115.0" text="Type" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

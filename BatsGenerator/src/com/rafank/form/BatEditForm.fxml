@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rafank.controller.impl.BatEditFormControl">
+   <center>
+      <VBox fx:id="vbContent" prefHeight="726.0" prefWidth="823.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="79.0" prefWidth="582.0">
+               <children>
+                  <Label text="Bat Name:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtName" prefHeight="25.0" prefWidth="493.0" promptText="Name ...">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="75.0" prefWidth="582.0">
+               <children>
+                  <Label text="Type:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="-0.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="rdOpenFolder" mnemonicParsing="false" selected="true" text="Open Folder">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Type" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdExecuteProgram" mnemonicParsing="false" text="Execute Program" toggleGroup="$Type">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="rdOpenFile" mnemonicParsing="false" text="Open File" toggleGroup="$Type">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="rdCustomScript" mnemonicParsing="false" text="Custom Script" toggleGroup="$Type">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+                  <RadioButton fx:id="rdUnknown" mnemonicParsing="false" text="Unknown" toggleGroup="$Type">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+               <VBox.margin>
+                  <Insets left="-42.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="hbFolder" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblFolder" text="Folder:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtFolderPath" prefHeight="25.0" prefWidth="421.0" promptText="Folder path ...">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnBrowseFolder" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Browse">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox fx:id="hbFile" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="File:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtFilePath" prefHeight="25.0" prefWidth="436.0" promptText="File path ...">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnBrowseFile" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Browse">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox fx:id="hbProgram" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Program:">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="txtProgramPath" prefHeight="25.0" prefWidth="406.0" promptText="Program path ...">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="btnBrowseProgram" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Browse">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_LEFT">
+               <children>
+                  <Label text="Old Content">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="New Content">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="325.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="250.0">
+               <children>
+                  <TextArea fx:id="txtOldContent" editable="false" prefHeight="180.0" prefWidth="400.0">
+                     <HBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextArea>
+                  <TextArea fx:id="txtContent" prefHeight="180.0" prefWidth="400.0">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextArea>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="87.0" prefWidth="582.0">
+               <children>
+                  <HBox prefHeight="45.0" prefWidth="597.0">
+                     <children>
+                        <Button fx:id="btnReload" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Reload">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="btnSave" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" text="Save Changes">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btnCancel" mnemonicParsing="false" prefHeight="25.0" prefWidth="70.0" text="Cancel">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
